@@ -3,12 +3,13 @@
 var React = require('react');
 var classNames = require('classnames');
 var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class')
 
 if (process.env.NODE_ENV !== 'test') {
   require('./react-simpletabs.css');
 }
 
-var Tabs = React.createClass({
+var Tabs = createReactClass({
   displayName: 'Tabs',
   propTypes: {
     className: PropTypes.oneOfType([
@@ -122,7 +123,7 @@ var Tabs = React.createClass({
   }
 });
 
-Tabs.Panel = React.createClass({
+Tabs.Panel = createReactClass({
   displayName: 'Panel',
   propTypes: {
     title: PropTypes.string.isRequired,
